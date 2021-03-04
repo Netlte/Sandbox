@@ -1,1 +1,7 @@
-app/config/local.neon
+# Dirs
+.idea/
+vendor/
+
+# Files
+composer.lock
+config/local.neon
