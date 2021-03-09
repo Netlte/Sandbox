@@ -10,3 +10,5 @@ parameters:
 		- app
 		- bin
 		- www
+	excludePaths:
+		- www/node_modules

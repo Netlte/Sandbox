@@ -5,6 +5,9 @@ namespace App\Controls;
 
 use Netlte\UI\AbstractControl;
 
+/**
+ * @method getTemplate() \Nette\Bridges\ApplicationLatte\Template|\Nette\Application\UI\Template
+ */
 class Sidebar extends AbstractControl {
 
 	public const DEFAULT_TEMPLATE = __DIR__ . \DS . 'templates' . \DS . 'sidebar.latte';

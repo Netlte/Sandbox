@@ -5,6 +5,7 @@ namespace App\Forms;
 use App\Model;
 use Nette;
 use Nette\Application\UI\Form;
+use Nette\Forms\Controls\TextInput;
 
 
 final class SignUpFormFactory {
@@ -43,7 +44,9 @@ final class SignUpFormFactory {
 			try {
 				$this->userManager->add($values->username, $values->email, $values->password);
 			} catch (Model\DuplicateNameException $e) {
-				$form['username']->addError('Username is already taken.');
+				/** @var TextInput $input */
+				$input = $form['username'];
+				$input->addError('Username is already taken.');
 				return;
 			}
 			$onSuccess();

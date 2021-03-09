@@ -42,7 +42,7 @@ final class UserManager implements Nette\Security\Authenticator {
 			->where(self::COLUMN_NAME, $username)
 			->fetch();
 
-		if (!$row) {
+		if ($row === null) {
 			throw new Nette\Security\AuthenticationException('The username is incorrect.', self::IDENTITY_NOT_FOUND);
 
 		} elseif (!$this->passwords->verify($password, $row[self::COLUMN_PASSWORD_HASH])) {
