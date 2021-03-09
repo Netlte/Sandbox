@@ -1,7 +1,7 @@
 {
-	"name": "nette/sandbox",
-	"description": "The sandbox is a pre-packaged Nette Framework project, basic configured structure for your application.",
-	"homepage": "https://nette.org",
+	"name": "netlte/sandbox",
+	"description": "The sandbox is a pre-packaged Nette & Netlte Framework project, basic configured structure for your application.",
+	"homepage": "https://github.com/Netlte/Sandbox",
 	"type": "project",
 	"license": ["BSD-3-Clause", "GPL-2.0-only", "GPL-3.0-only"],
 	"authors": [
@@ -12,6 +12,10 @@
 		{
 			"name": "Nette Community",
 			"homepage": "https://nette.org/contributors"
+		},
+		{
+			"name": "Tomas Holan",
+			"homepage": "https://holan.dev"
 		}
 	],
 	"require": {
