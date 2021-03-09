@@ -1,65 +1,65 @@
-Nette Sandbox
-=============
+# Netlte > Sandbox
 
-This is a simple pre-packaged and pre-configured application using the [Nette](https://nette.org)
-that you can use as the starting point for your new applications.
+[![Build Status](https://badgen.net/travis/netlte/sandbox)](https://travis-ci.com/Netlte/Sandbox)
+[![Licence](https://badgen.net/packagist/license/netlte/sandbox)](https://packagist.org/packages/Netlte/Sandbox)
+[![Latest stable](https://badgen.net/packagist/v/netlte/sandbox)](https://packagist.org/packages/Netlte/Sandbox)
+[![Downloads this Month](https://badgen.net/packagist/dm/netlte/sandbox)](https://packagist.org/packages/Netlte/Sandbox)
+[![Downloads total](https://badgen.net/packagist/dt/netlte/sandbox)](https://packagist.org/packages/Netlte/Sandbox)
+[![PHPStan](https://badgen.net/badge/PHPStan/enabled/green)](https://github.com/phpstan/phpstan)
 
-[Nette](https://nette.org) is a popular tool for PHP web development.
-It is designed to be the most usable and friendliest as possible. It focuses
-on security and performance and is definitely one of the safest PHP frameworks.
+## Credits
 
-If you like Nette, **[please make a donation now](https://nette.org/donate)**. Thank you!
+Feel free to use. Your contributions are very welcome. Feel free to publish pull requests.
+Thanks to [David Grudl](https://github.com/dg) and community for great php [**Nette**](https://nette.org/) framework and [Colorlib](https://colorlib.com/) for widely used [**AdminLTE**](https://adminlte.io/) bootstrap template.
 
+## Overview
 
-Installation
-------------
+Basic sandbox app to demonstrate graphical **Netlte** framework of [**AdminLTE**](https://adminlte.io/) build on php [**Nette**](https://nette.org/) framework component model.
+Currently, all components supports old AdminLTE2. AdminLTE3 is on way immediately after all main components will be implemented.
+All packages on a version v1.x are for AdminLTE2 and PHP >= 7.4.
+All packages on a version v2.x are for AdminLTE3 and PHP >= 8.0.
 
-The best way to install Web Project is using Composer. If you don't have Composer yet,
-download it following [the instructions](https://doc.nette.org/composer). Then use command:
+## Install
+```bash
+composer create-project netlte/sandbox path/to/install
+cd path/to/install
+composer install # Dependencies
+cd www/
+npm install # Assets
+```
 
-	composer create-project nette/sandbox path/to/install
-	cd path/to/install
+## Documentation
+All components have their documentation in own repository
+* [UI](https://github.com/Netlte/UI) - Basic utilities for building components
+* [Navigation](https://github.com/Netlte/Navigation) - Structure and view for navigation component
+* [Widgets](https://github.com/Netlte/Widgets) - All kind of boxes, tabbox and more same kind components **[WIP]**
+* [BreadCrumbs](https://github.com/Netlte/BreadCrumbs) - Component for standard BreadCrumbs **[WIP]**
+* [Dashboard](https://github.com/Netlte/Dashboard) - Component for organize dashboard panel **[WIP]**
+* [Timeline](https://github.com/Netlte/Timeline) - Component to show event in nice way **[WIP]**
+* **more on way ...**
 
+| State       | AdminLTE | Version | Branch   | PHP      |
+|-------------|----------|---------|----------|----------|
+| stable      |   `2.0`  | `^1.0`  |  `main`  | `>= 7.4` |
+| NoN         |   `3.0`  | `^2.0`  |  `main`  | `>= 8.0` |
 
-Make directories `temp/` and `log/` writable.
+## Tests
 
+Check code quality and run tests
+```
+composer build
+```
 
-Web Server Setup
-----------------
+or separately
 
-The simplest way to get started is to start the built-in PHP server in the root directory of your project:
+```
+composer cs
+composer analyse
+composer tests
+```
 
-	php -S localhost:8000 -t www
+## Authors
 
-Then visit `http://localhost:8000` in your browser to see the welcome page.
-
-For Apache or Nginx, setup a virtual host to point to the `www/` directory of the project and you
-should be ready to go.
-
-It is CRITICAL that whole `app/`, `config`, `log/` and `temp/` directories are not accessible directly
-via a web browser. See [security warning](https://nette.org/security-warning).
-
-
-Requirements
-------------
-
-- Sandbox for Nette 3.1 requires PHP 7.4
-
-To check whether server configuration meets the minimum requirements for
-Nette Framework browse to the directory `/checker` in your project root (i.e. `http://localhost:8000/checker`).
-
-
-Adminer
--------
-
-[Adminer](https://www.adminer.org/) is full-featured database management tool written in PHP and it is part of this Sandbox.
-To use it, browse to the subdirectory `/adminer` in your project root (i.e. `http://localhost:8000/adminer`).
-
-
-PHPStan
--------
-
-[PHPStan](https://github.com/phpstan/phpstan) is static analysis tool to discover bugs in your code without running it.
-Run PHPStan like this:
-
-	composer phpstan
+| [Tomáš Holan](https://github.com/holantomas)                             |
+|--------------------------------------------------------------------------|
+| ![Avatar](https://avatars3.githubusercontent.com/u/5030499?s=100)        |

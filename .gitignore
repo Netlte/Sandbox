@@ -1,7 +1,10 @@
 # Dirs
 .idea/
 vendor/
+www/node_modules/
 
 # Files
 composer.lock
 config/local.neon
+www/package-lock.json
+

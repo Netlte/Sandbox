@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace App;
 
@@ -14,7 +12,7 @@ class Bootstrap
 		$configurator = new Configurator;
 		$appDir = dirname(__DIR__);
 
-		//$configurator->setDebugMode('secret@23.75.345.200'); // enable for your remote IP
+		$configurator->setDebugMode(true); // enable for your remote IP
 		$configurator->enableTracy($appDir . '/log');
 
 		$configurator->setTimeZone('Europe/Prague');

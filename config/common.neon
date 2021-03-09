@@ -2,8 +2,10 @@
 # WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
 # https://nette.org/security-warning
 #
-parameters:
+includes:
+	- netlte.neon
 
+parameters:
 
 application:
 	errorPresenter: Error
