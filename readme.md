@@ -14,7 +14,7 @@ Thanks to [David Grudl](https://github.com/dg) and community for great php [**Ne
 
 ## Overview
 
-Basic sandbox app to demonstrate graphical **Netlte** framework of [**AdminLTE**](https://adminlte.io/) build on php [**Nette**](https://nette.org/) framework component model.
+This is basic sandbox app forked from [`nette/sandbox`](https://github.com/nette/sandbox) to demonstrate graphical **Netlte** framework of [**AdminLTE**](https://adminlte.io/) build on php [**Nette**](https://nette.org/) framework component model.
 Currently, all components supports old AdminLTE2. AdminLTE3 is on way immediately after all main components will be implemented.
 All packages on a version v1.x are for AdminLTE2 and PHP >= 7.4.
 All packages on a version v2.x are for AdminLTE3 and PHP >= 8.0.
