@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Forms;
 
@@ -9,8 +7,8 @@ use Nette\Application\UI\Form;
 use Nette\Security\User;
 
 
-final class SignInFormFactory
-{
+final class SignInFormFactory {
+
 	use Nette\SmartObject;
 
 	private FormFactory $factory;
@@ -18,15 +16,13 @@ final class SignInFormFactory
 	private User $user;
 
 
-	public function __construct(FormFactory $factory, User $user)
-	{
+	public function __construct(FormFactory $factory, User $user) {
 		$this->factory = $factory;
 		$this->user = $user;
 	}
 
 
-	public function create(callable $onSuccess): Form
-	{
+	public function create(callable $onSuccess): Form {
 		$form = $this->factory->create();
 		$form->addText('username', 'Username:')
 			->setRequired('Please enter your username.');

@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Model;
 
@@ -11,8 +9,8 @@ use Nette\Security\Passwords;
 /**
  * Users management.
  */
-final class UserManager implements Nette\Security\Authenticator
-{
+final class UserManager implements Nette\Security\Authenticator {
+
 	use Nette\SmartObject;
 
 	private const
@@ -29,8 +27,7 @@ final class UserManager implements Nette\Security\Authenticator
 	private Passwords $passwords;
 
 
-	public function __construct(Nette\Database\Explorer $database, Passwords $passwords)
-	{
+	public function __construct(Nette\Database\Explorer $database, Passwords $passwords) {
 		$this->database = $database;
 		$this->passwords = $passwords;
 	}
@@ -40,8 +37,7 @@ final class UserManager implements Nette\Security\Authenticator
 	 * Performs an authentication.
 	 * @throws Nette\Security\AuthenticationException
 	 */
-	public function authenticate(string $username, string $password): Nette\Security\SimpleIdentity
-	{
+	public function authenticate(string $username, string $password): Nette\Security\SimpleIdentity {
 		$row = $this->database->table(self::TABLE_NAME)
 			->where(self::COLUMN_NAME, $username)
 			->fetch();
@@ -68,8 +64,7 @@ final class UserManager implements Nette\Security\Authenticator
 	 * Adds new user.
 	 * @throws DuplicateNameException
 	 */
-	public function add(string $username, string $email, string $password): void
-	{
+	public function add(string $username, string $email, string $password): void {
 		Nette\Utils\Validators::assert($email, 'email');
 		try {
 			$this->database->table(self::TABLE_NAME)->insert([
@@ -85,6 +80,6 @@ final class UserManager implements Nette\Security\Authenticator
 
 
 
-class DuplicateNameException extends \Exception
-{
+class DuplicateNameException extends \Exception {
+
 }

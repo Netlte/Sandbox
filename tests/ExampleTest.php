@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Tests;
 
@@ -11,24 +9,22 @@ use Tester\Assert;
 require __DIR__ . '/../vendor/autoload.php';
 
 
-class ExampleTest extends Tester\TestCase
-{
-	private $container;
+class ExampleTest extends Tester\TestCase {
+
+	private Nette\DI\Container $container;
 
 
-	public function __construct(Nette\DI\Container $container)
-	{
+	public function __construct(Nette\DI\Container $container) {
 		$this->container = $container;
 	}
 
 
-	public function setUp()
-	{
+	public function setUp(): void {
 	}
 
 
-	public function testSomething()
-	{
+	public function testSomething(): void {
+		Assert::type(Nette\DI\Container::class, $this->container);
 		Assert::true(true);
 	}
 }

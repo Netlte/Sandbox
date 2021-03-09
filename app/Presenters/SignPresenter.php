@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Presenters;
 
@@ -8,18 +6,18 @@ use App\Forms;
 use Nette\Application\UI\Form;
 
 
-final class SignPresenter extends BasePresenter
-{
+final class SignPresenter extends BasePresenter {
+
 	/** @persistent */
-	public $backlink = '';
+	public string $backlink = '';
 
 	private Forms\SignInFormFactory $signInFactory;
 
 	private Forms\SignUpFormFactory $signUpFactory;
 
 
-	public function __construct(Forms\SignInFormFactory $signInFactory, Forms\SignUpFormFactory $signUpFactory)
-	{
+	public function __construct(Forms\SignInFormFactory $signInFactory, Forms\SignUpFormFactory $signUpFactory) {
+		parent::__construct();
 		$this->signInFactory = $signInFactory;
 		$this->signUpFactory = $signUpFactory;
 	}
@@ -28,8 +26,7 @@ final class SignPresenter extends BasePresenter
 	/**
 	 * Sign-in form factory.
 	 */
-	protected function createComponentSignInForm(): Form
-	{
+	protected function createComponentSignInForm(): Form {
 		return $this->signInFactory->create(function (): void {
 			$this->restoreRequest($this->backlink);
 			$this->redirect('Homepage:');
@@ -40,16 +37,14 @@ final class SignPresenter extends BasePresenter
 	/**
 	 * Sign-up form factory.
 	 */
-	protected function createComponentSignUpForm(): Form
-	{
+	protected function createComponentSignUpForm(): Form {
 		return $this->signUpFactory->create(function (): void {
 			$this->redirect('Homepage:');
 		});
 	}
 
 
-	public function actionOut(): void
-	{
+	public function actionOut(): void {
 		$this->getUser()->logout();
 	}
 }

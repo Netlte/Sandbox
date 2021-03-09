@@ -47,6 +47,11 @@
 			"App\\": "app"
 		}
 	},
+	"autoload-dev": {
+		"psr-4": {
+			"App\\Tests\\": "tests/"
+		}
+	},
 	"minimum-stability": "stable",
 	"scripts": {
 	  "tests": "tester -s -p php --colors 1 -C tests",

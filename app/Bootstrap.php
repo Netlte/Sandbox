@@ -1,16 +1,15 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App;
 
 use Nette\Bootstrap\Configurator;
 
 
-class Bootstrap
-{
-	public static function boot(): Configurator
-	{
+class Bootstrap {
+
+	public static function boot(): Configurator {
 		$configurator = new Configurator;
-		$appDir = dirname(__DIR__);
+		$appDir = \dirname(__DIR__);
 
 		$configurator->setDebugMode(true); // enable for your remote IP
 		$configurator->enableTracy($appDir . '/log');
@@ -30,8 +29,7 @@ class Bootstrap
 	}
 
 
-	public static function bootForTests(): Configurator
-	{
+	public static function bootForTests(): Configurator {
 		$configurator = self::boot();
 		\Tester\Environment::setup();
 		return $configurator;

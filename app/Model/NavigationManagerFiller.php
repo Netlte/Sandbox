@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Model;
 
@@ -11,7 +9,7 @@ use Nette\StaticClass;
 class NavigationManagerFiller {
 	use StaticClass;
 
-	static public function prefill(IManager $manager, Presenter $presenter) {
+	static public function prefill(IManager $manager, Presenter $presenter): void {
 		$section = $manager->createSection('main', 'MAIN NAVIGATION');
 
 		$item = $section->createItem('dashboard', 'Dashboard')
