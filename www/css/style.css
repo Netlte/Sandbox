@@ -6,3 +6,7 @@ a[href^="#error:"] {
 form .required label {
     font-weight: bold;
 }
+
+.action {
+    margin-left: 10px;
+}

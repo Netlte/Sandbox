@@ -17,16 +17,20 @@ class NavigationManagerFiller {
 			->setLink('#')
 			->setUrl(true)
 			->addActiveCondition(function() use ($presenter): bool{
-				return $presenter->isLinkCurrent(':Homepage:*');
+				return $presenter->isLinkCurrent(':Dashboard:*');
 			});
 
 		$item->createItem('v1', 'Dashboard v1')
-			->setLink('Homepage:default')
+			->setLink('Dashboard:default')
 			->addActiveCondition(function() use ($presenter): bool{
-				return $presenter->isLinkCurrent('Homepage:default');
+				return $presenter->isLinkCurrent('Dashboard:default');
 			});
 
-		$item->createItem('v2', 'Dashboard v2')->setLink('#')->setUrl(true);
+		$item->createItem('v2', 'Dashboard v2')
+			->setLink('Dashboard:v2')
+			->addActiveCondition(function() use ($presenter): bool{
+				return $presenter->isLinkCurrent('Dashboard:v2');
+			});
 
 		$section->createItem('layout_options', 'Layout Options')
 			->setLink('#')
@@ -35,10 +39,12 @@ class NavigationManagerFiller {
 			->setLabel('4');
 
 		$section->createItem('widgets', 'Widgets')
-			->setLink('#')
-			->setUrl(true)
+			->setLink('Widgets:default')
 			->setIcon('th')
-			->setLabel('new', 'green');
+			->setLabel('new', 'green')
+			->addActiveCondition(function() use ($presenter): bool{
+				return $presenter->isLinkCurrent('Widgets:*');
+			});
 
 		$item = $section->createItem('charts', 'Charts')
 			->setLink('#')

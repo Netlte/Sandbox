@@ -8,3 +8,8 @@ extensions:
 	navigation: Netlte\Navigation\Bridges\Nette\NavigationExtension
 
 services:
+	translator: App\Model\Translator
+
+	netlte.panels.dashboard_v1: App\Panels\Dashboard1Panel
+	netlte.panels.dashboard_v2: App\Panels\Dashboard2Panel
+	netlte.panels.widgets_default: App\Panels\WidgetsDefaultPanel

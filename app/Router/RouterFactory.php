@@ -12,7 +12,7 @@ final class RouterFactory {
 
 	public static function createRouter(): RouteList {
 		$router = new RouteList;
-		$router->addRoute('<presenter>/<action>', 'Homepage:default');
+		$router->addRoute('<presenter>/<action>', 'Dashboard:default');
 		return $router;
 	}
 }

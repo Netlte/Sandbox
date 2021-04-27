@@ -15,12 +15,14 @@
 		},
 		{
 			"name": "Tomas Holan",
-			"homepage": "https://holan.dev"
+		  	"homepage": "https://www.holan.dev"
 		}
 	],
 	"require": {
 		"php": ">=7.4",
+	  	"netlte/boxes": "^1.0",
 		"netlte/navigation": "^1.0",
+		"netlte/panel": "^1.0",
 		"nette/application": "^3.1",
 		"nette/bootstrap": "^3.1",
 		"nette/caching": "^3.1",

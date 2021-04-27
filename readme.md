@@ -31,9 +31,11 @@ npm install # Assets
 ## Documentation
 All components have their documentation in own repository
 * [UI](https://github.com/Netlte/UI) - Basic utilities for building components
+* [Panel](https://github.com/Netlte/Panel) - Basic components factory to clean-up your presenters
 * [Navigation](https://github.com/Netlte/Navigation) - Structure and view for navigation component
-* [Widgets](https://github.com/Netlte/Widgets) - All kind of boxes, tabbox and more same kind components **[WIP]**
-* [BreadCrumbs](https://github.com/Netlte/BreadCrumbs) - Component for standard BreadCrumbs **[WIP]**
+* [Boxes](https://github.com/Netlte/Boxes) - All kind of boxes, tabbox and more same kind components
+* [BreadCrumbs](https://github.com/Netlte/BreadCrumbs) - Component for standard BreadCrumbs
+* [ActionBar](https://github.com/Netlte/ActionBar) - Component for heading actions
 * [Dashboard](https://github.com/Netlte/Dashboard) - Component for organize dashboard panel **[WIP]**
 * [Timeline](https://github.com/Netlte/Timeline) - Component to show event in nice way **[WIP]**
 * **more on way ...**
